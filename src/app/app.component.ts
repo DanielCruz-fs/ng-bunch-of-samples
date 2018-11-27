@@ -7,4 +7,22 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'pipes-examples';
+  name: string = 'Daniel';
+  myArray: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  pi: number = Math.PI;
+  earnings: number = 0.234;
+  salary: number = 1234.5;
+  myLove = {
+    name: 'Kathya',
+    lastnname: 'Villa Alanoca',
+    age: 'unknown',
+    location: {
+      address: 'Cascada Acribol',
+      hint: 'Puente Pro-Mujer'
+    }
+  };
+  myPromise = new Promise((resolve, reject) => {
+    setTimeout(() => resolve(`I will kiss kathya's lips again.`), 4000);
+  });
+  myDate = new Date();
 }
