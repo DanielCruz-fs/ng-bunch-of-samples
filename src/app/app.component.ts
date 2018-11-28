@@ -25,4 +25,12 @@ export class AppComponent {
     setTimeout(() => resolve(`I will kiss kathya's lips again.`), 4000);
   });
   myDate = new Date();
+  messyName: string = 'dAnIel CrUz cAlANi';
+  myFavMovie: string = 'OUS--2gt1As';
+  myPassword: string = 'kathyateamo';
+  passwordState: boolean = true;
+  
+  togglePassword() {
+    this.passwordState = !this.passwordState;
+  }
 }

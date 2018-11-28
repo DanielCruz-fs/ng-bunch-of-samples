@@ -112,6 +112,23 @@
                   <td>date:'dd - MMMM - y'</td>
                   <td>{{ myDate | date:'dd - MMMM - y' }}</td>
                 </tr>
+                <tr>
+                  <td>{{ messyName }}</td>
+                  <td>capitalize</td>
+                  <td>{{ messyName | capitalize }}</td>
+                </tr>
+                <tr>
+                  <td>{{ messyName }}</td>
+                  <td>capitalize:false</td>
+                  <td>{{ messyName | capitalize:false }}</td>
+                </tr>
+                <tr>
+                    <td>{{ myPassword }}</td>
+                    <td>State: {{ passwordState }}
+                      <button (click)="togglePassword()" class="btn btn-outline-light">Show/Hide</button>
+                    </td>
+                    <td>{{ myPassword | password: passwordState }}</td>
+                  </tr>
               </tbody>
             </table>
         </div>
@@ -127,7 +144,14 @@
           {{ myLove | json }}
           </pre>
         </div>
+        <div class="col-12">
+            <p class="text-center">My favorite Movie Ever!!!</p>
+        </div>
+        <div class="col-12 embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item p-4" [src]="myFavMovie | safeDom: 'https://www.youtube.com/embed/'" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
     </div>
   </div>
 </section>
+
 
